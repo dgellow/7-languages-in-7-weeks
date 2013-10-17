@@ -1,9 +1,8 @@
 # Day 2
 #######
-
 ## Task 1
-## Print the content of an array of sixteen numbers, four numbers at a time,
-## using just `each'.
+# Print the content of an array of sixteen numbers, four numbers at a time,
+# using just `each'.
 arr = []
 (1..16).to_a.each do |n|
   arr << n

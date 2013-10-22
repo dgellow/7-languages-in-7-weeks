@@ -22,17 +22,16 @@ true and "" // => true
 // How can you tell what slots a prototype supports?
 Object slotNames
 
-//_________
-// ::=      Creates slot, creates setter, assigns value
+// ::=    Creates slot, creates setter, assigns value
 Alien := Object clone do (
-		 legs ::= nil // Compiles to newSlot("legs", "P...")
+  legs ::= nil // Compiles to newSlot("legs", "P...")
 )
 Zerg := Alien setLegs(6)
 
-// :=       Creates slot, assigns value
+// :=     Creates slot, assigns value
 Alien age := 255 // Compiles to Alien setSlot("age", 255)
 
-// =        Assigns value to slot if it exists, otherwise raises an exception
+// =      Assigns value to slot if it exists, otherwise raises an exception
 Alien age = 123 // Compiles to Alien updateSlot("age", "Ba...")
 try(Alien favoriteFood = "Banaaaaana") error
 // => Slot favoriteFood not found. 

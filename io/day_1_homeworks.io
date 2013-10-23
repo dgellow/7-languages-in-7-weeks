@@ -24,7 +24,7 @@ Object slotNames
 
 // ::=    Creates slot, creates setter, assigns value
 Alien := Object clone do (
-  legs ::= nil // Compiles to newSlot("legs", "P...")
+  legs ::= nil // Compiles to newSlot("legs", nil)
 )
 Zerg := Alien setLegs(6)
 
